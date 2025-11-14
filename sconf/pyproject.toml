@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "sconf"
+version = "0.1.0"
+description = ""
+authors = ["Stepan Pijacek <223313@vutbr.cz>"]
+license = "MIT"
+readme = "README.md"
+packages = [
+	{ include = "sconf", from = "src" },
+]
+include = [
+	{ path = "icons",  format = ["sdist", "wheel"]},
+	{ path = "phish",  format = ["sdist", "wheel"]},
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+dataclass_wizard = "^0.26.0"
+py3_validate_email = "1.0.5"
+pyqt5-qt5 = "^5.15.16"
+PyQt5 = "^5.15.11"
+pyqt5-sip = "^12.15.0"
+setuptools = "75.3.0"
+vcolorpicker = "1.4.4"
+qtpy = "^2.4.2"
+pycryptodome = "^3.21.0"
+scryptum = {path = "../siso/src/scryptum"}
+
+[tool.poetry.scripts]
+sconf = "sconf.__main__:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
