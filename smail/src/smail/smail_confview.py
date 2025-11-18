@@ -75,13 +75,12 @@ class MainWindow(QMainWindow):
         self.stacked_widget.addWidget(self.security_view)  # Index 1
         self.stacked_widget.addWidget(self.visual_view)  # Index 2
         self.stacked_widget.addWidget(self.mail_view)  # Index 3
+        
+   
 
-
-  
         # Adds space at the bottom
         screenGeometry = screen.geometry()
         container.move(
              (screenGeometry.width() - container.width()) // 2,
              (screenGeometry.height() - container.height()) // 2
         )
-

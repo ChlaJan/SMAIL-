@@ -123,10 +123,11 @@ class first_frame(QWidget):
 
         current_menu = button_menu1 if self.menu1 else button_menu2
 
-        self.button_layout.addItem(spacer_left)
+        # self.button_layout.addItem(spacer_left)
         for index, text in enumerate(current_menu):
             button = QPushButton(text, self.button_frame)
-
+            button.setMinimumSize(244, 107)  # Updated size to match Figma
+            button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Minimum)
             #This was used to change the color of the "To/Komu" button to make it stand out, but it is now set to the same color.
             if not self.menu1 and index == 4:
                 button.setStyleSheet(style.get_button_style(self.data_provider))
@@ -195,8 +196,8 @@ class first_frame(QWidget):
                         button.clicked.connect(lambda _, btn=button, nb=7: self.decide_action_for_button(btn, nb))
 
         self.button_layout.setSpacing(10)
-        self.button_layout.addItem(spacer_right)
-        self.button_layout.setContentsMargins(10, 12, 10, 10)
+       # self.button_layout.addItem(spacer_right)
+       # self.button_layout.setContentsMargins(10, 12, 10, 10)
 
     def alert_buttons(self, alert=True):
         """

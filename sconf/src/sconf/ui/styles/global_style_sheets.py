@@ -56,11 +56,13 @@ def get_active_menu_button_style(highlight_color):
 def get_default_label_style():
     return """
     QLabel {
+        border: 0px solid #000000;
         font-family: Inter;
         font-size: 20px;
         color: #000000;
         max-width: 260px;
         min-height: 32px;
+        text-align: right;
     }
     """
 
@@ -82,11 +84,13 @@ def get_default_rich_text_style():
 def get_error_label_style():
     return """
     QLabel {
+        background-color: #FFFFFF;        
+        border: 1px solid #0000;
         font-family: Inter;
         font-size: 20px;
         color: #FF0000;
         max-height: 32px;
-        text-align: center;
+        text-align: right;
     }
     """
 
@@ -102,6 +106,7 @@ def get_default_dropdown_style():
             background-color: #D9D9D9;
             min-height: 40px;
             max-width: 500px;
+            text-align: left;
         }
     """
 
@@ -117,6 +122,7 @@ def get_default_input_box_style():
             background-color: #FFFFFF;
             min-height: 40px;
             max-width: 500px;
+            text-align: left;
         }
     """
 

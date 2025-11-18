@@ -35,8 +35,6 @@ def get_button_style(data_provider=None, normal=True, highlight=False):
               font-family: Inter;
               font-size: 40px;
               text-align: {button_position};
-              width: {button_width}px;
-              height: {button_height}px;
           }}
           QPushButton:pressed {{
               background-color: {colors["highlight_color"]};
@@ -167,7 +165,7 @@ def get_label_style():
         Returns the style for text labels.
     """
     return """
-        border: 1px solid black;             
+        border: 0px solid black;             
         border-radius: 8px;
         padding: 0px;
         padding-top: 5px;
@@ -245,7 +243,7 @@ def get_inbox_style():
     """
     return """
         QListWidget {
-            border: 1px solid black;             
+            border: 2px solid black;             
             border-radius: 8px;
             padding: 5px;
             font-family: 'Inter';

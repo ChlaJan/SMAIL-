@@ -51,7 +51,7 @@ class MailSettingsView(QWidget):
         self.button_layout = QHBoxLayout(self.button_frame)
         spacer_left = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         spacer_right = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-        self.button_layout.addItem(spacer_left)
+        #self.button_layout.addItem(spacer_left)
         # Creating the menu buttons
         self.menu_buttons = {
             "Menu1": QPushButton("MENU 1"),
@@ -63,7 +63,7 @@ class MailSettingsView(QWidget):
 
         # Set up each button with proper sizing and styling
         for name, button in self.menu_buttons.items():
-            button.setFixedSize(244, 107) # Updated size to match Figma
+            button.setMinimumSize(244, 107) # Updated size to match Figma
             if name == "X":
                 pixmap_icon = QPixmap("/home/vboxuser/senior-os/sconf/icons/exit.png").scaled(40, 40, Qt.KeepAspectRatio,
                                                                         Qt.SmoothTransformation)
@@ -73,7 +73,7 @@ class MailSettingsView(QWidget):
             button.setStyleSheet(style.get_button_style(self.data_provider))
 
         self.button_layout.setSpacing(10)
-        self.button_layout.addItem(spacer_right)
+        #self.button_layout.addItem(spacer_right)
         self.button_frame.setStyleSheet(style.get_button_frame_style())
         self.main_layout.addWidget(self.button_frame)
 
@@ -86,7 +86,12 @@ class MailSettingsView(QWidget):
         # Labels
         label_senior_mail = QLabel("Senior email")
         label_senior_password = QLabel("Senior password")
-        self.label_email_contacts = QLabel("Email contacts (up to six)")
+        self.label_email_contact1 = QLabel("Email contact 1")
+        self.label_email_contact2 = QLabel("Email contact 2")
+        self.label_email_contact3 = QLabel("Email contact 3")
+        self.label_email_contact4 = QLabel("Email contact 4")
+        self.label_email_contact5 = QLabel("Email contact 5")
+        self.label_email_contact6 = QLabel("Email contact 6")
 
         self.label_error = QLabel()
         self.label_error.setVisible(False)
@@ -135,12 +140,17 @@ class MailSettingsView(QWidget):
         self.grid_layout.addWidget(label_senior_password, 1, 0)
         self.grid_layout.addWidget(self.senior_password, 1, 1)
 
-        self.grid_layout.addWidget(self.label_email_contacts, 2, 0)
+        self.grid_layout.addWidget(self.label_email_contact1, 2, 0)
         self.grid_layout.addWidget(self.email_contact1, 2, 1)
+        self.grid_layout.addWidget(self.label_email_contact2, 3, 0)
         self.grid_layout.addWidget(self.email_contact2, 3, 1)
+        self.grid_layout.addWidget(self.label_email_contact3, 4, 0)
         self.grid_layout.addWidget(self.email_contact3, 4, 1)
+        self.grid_layout.addWidget(self.label_email_contact4, 5, 0)
         self.grid_layout.addWidget(self.email_contact4, 5, 1)
+        self.grid_layout.addWidget(self.label_email_contact5, 6, 0)
         self.grid_layout.addWidget(self.email_contact5, 6, 1)
+        self.grid_layout.addWidget(self.label_email_contact6, 7, 0)
         self.grid_layout.addWidget(self.email_contact6, 7, 1)
 
 

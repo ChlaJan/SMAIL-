@@ -11,8 +11,9 @@ from sconf.configuration.models.smail_configuration import SmailConfiguration
 from sconf.configuration.models.sos_configuration import SOSConfiguration
 from sconf.ui.convertors.value_convertors import StringValueConvertors
 from sconf.ui.styles.global_style_sheets import get_default_label_style, get_default_input_box_style, \
-    get_default_dropdown_style, get_default_config_button_style, get_default_menu_button_style, get_active_menu_button_style
+    get_default_dropdown_style
 from sconf.ui.view_models.global_settings_view_model import GlobalViewModel
+import smail.smail_confview as smail_confview
 
 
 class SecuritySettingsView(QWidget):
@@ -39,7 +40,7 @@ class SecuritySettingsView(QWidget):
         self.button_layout = QHBoxLayout(self.button_frame)
         spacer_left = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         spacer_right = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-        self.button_layout.addItem(spacer_left)
+      #  self.button_layout.addItem(spacer_left)
 
         # Creating the menu buttons
         self.menu_buttons = {
@@ -52,7 +53,8 @@ class SecuritySettingsView(QWidget):
 
         # Set up each button with proper sizing and styling
         for name, button in self.menu_buttons.items():
-            button.setFixedSize(244, 107) # Updated size to match Figma
+            button.setMinimumSize(244, 107) # Updated size to match Figma
+            button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Minimum)
             if name == "X":
                 pixmap_icon = QPixmap("/home/vboxuser/senior-os/sconf/icons/exit.png").scaled(40, 40, Qt.KeepAspectRatio,
                                                                         Qt.SmoothTransformation)
@@ -62,7 +64,7 @@ class SecuritySettingsView(QWidget):
             button.setStyleSheet(style.get_button_style(self.data_provider))
 
         self.button_layout.setSpacing(10)
-        self.button_layout.addItem(spacer_right)
+        #self.button_layout.addItem(spacer_right)
         self.button_frame.setStyleSheet(style.get_button_frame_style())
         self.main_layout.addWidget(self.button_frame)
 
@@ -98,18 +100,18 @@ class SecuritySettingsView(QWidget):
         self.setLayout(self.main_layout)
 
         # Apply styling
-        self.setStyleSheet(f"""
-                            {get_default_label_style()}
-                            {get_default_input_box_style()}
-                            {get_default_dropdown_style()}
-                        """)
+        self.setStyleSheet(
+                           get_default_label_style()
+                           + get_default_input_box_style()
+                           + get_default_dropdown_style()
+                           )
         self.bottom_frame.setMinimumSize(1260, 580)
         self.bottom_frame.setStyleSheet("""
                 background-color: #FFFFFF;        
                 border: 2px solid #000000;                                        
                 border-radius: 8px;
                                         """)
-
+        
         self.button_frame.setStyleSheet(style.get_button_frame_style())
         self.menu_buttons["Menu1"].setStyleSheet(style.get_button_style(self.data_provider))
         self.menu_buttons["X"].setStyleSheet(style.get_button_style(self.data_provider))
@@ -130,6 +132,7 @@ class SecuritySettingsView(QWidget):
         )
         self.stacked_widget.setCurrentIndex(0)
         self.stacked_widget.update()
+        
     def show_security_view(self):
         self.configuration_writer.update_configuration(
             configuration=self.data_provider.get_main_configuration()
