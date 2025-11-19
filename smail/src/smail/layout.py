@@ -257,6 +257,11 @@ class first_frame(QWidget):
     
     def smail_conf(self): 
         self.stacked_widget.setCurrentIndex(1)
+
+    def restart():
+        QApplication.quit()
+        status = QtCore.QProcess.startDetached(sys.executable, sys.argv)
+        print(status)
     def exit_app(self):
         """
             Closes the application.

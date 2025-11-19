@@ -1,5 +1,5 @@
-
-from PyQt5.QtCore import pyqtSlot, QSize, Qt
+import sys
+from PyQt5.QtCore import pyqtSlot, QSize, Qt, QCoreApplication, QProcess
 from PyQt5.QtGui import QPixmap, QIcon
 from PyQt5.QtWidgets import QWidget, QLabel, QHBoxLayout, QLineEdit, QGridLayout, QPushButton, QVBoxLayout, QSpacerItem, \
 QSizePolicy, QFrame, QComboBox
@@ -153,7 +153,9 @@ class VisualSettingsView(QWidget):
         )
         self.stacked_widget.setCurrentIndex(0)
         self.stacked_widget.update()
-        smail_confview.update_main(self.stacked_widget)
+        QCoreApplication.quit()
+        status = QProcess.startDetached(sys.executable, sys.argv)
+        print(status)
     def show_security_view(self):
         self.configuration_writer.update_configuration(
             configuration=self.data_provider.get_main_configuration()

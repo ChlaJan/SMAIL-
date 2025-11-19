@@ -1,6 +1,7 @@
 
+import sys
 from PyQt5.QtGui import QPixmap, QIcon
-from PyQt5.QtCore import pyqtSlot, QSize, Qt
+from PyQt5.QtCore import pyqtSlot, QSize, Qt, QCoreApplication, QProcess
 from PyQt5.QtWidgets import QWidget, QLabel, QComboBox, QLineEdit, QGridLayout, QPushButton, QVBoxLayout, QSpacerItem, \
     QSizePolicy, QFrame, QHBoxLayout
 
@@ -132,6 +133,9 @@ class SecuritySettingsView(QWidget):
         )
         self.stacked_widget.setCurrentIndex(0)
         self.stacked_widget.update()
+        QCoreApplication.quit()
+        status = QProcess.startDetached(sys.executable, sys.argv)
+        print(status)
         
     def show_security_view(self):
         self.configuration_writer.update_configuration(

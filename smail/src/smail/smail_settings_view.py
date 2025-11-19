@@ -1,7 +1,8 @@
 import os
+import sys
 
 from PyQt5 import QtWidgets
-from PyQt5.QtCore import pyqtSlot, Qt, QSize
+from PyQt5.QtCore import pyqtSlot, Qt, QSize, QCoreApplication, QProcess
 from PyQt5.QtGui import QPixmap, QIcon
 from PyQt5.QtWidgets import (QWidget, QLabel, QLineEdit, QGridLayout, QComboBox, QFileDialog, QDialog, QVBoxLayout, QHBoxLayout, QSpacerItem, QSizePolicy, QFrame, QPushButton)
 
@@ -199,6 +200,9 @@ class MailSettingsView(QWidget):
         )
         self.stacked_widget.setCurrentIndex(0)
         self.stacked_widget.update()
+        QCoreApplication.quit()
+        status = QProcess.startDetached(sys.executable, sys.argv)
+        print(status)
     def show_security_view(self):
         self.configuration_writer.update_configuration(
             configuration=self.data_provider.get_main_configuration()
