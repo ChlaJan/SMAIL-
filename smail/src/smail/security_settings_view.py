@@ -37,7 +37,6 @@ class SecuritySettingsView(QWidget):
         self.button_frame = QFrame(self)
         self.button_frame.setStyleSheet(style.get_button_frame_style())
         self.button_frame.setFrameShape(QFrame.StyledPanel)
-        self.button_frame.setFixedHeight(130)
         self.button_layout = QHBoxLayout(self.button_frame)
         spacer_left = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
         spacer_right = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)

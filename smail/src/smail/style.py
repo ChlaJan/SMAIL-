@@ -3,10 +3,14 @@ import os
 import re
 import sys
 from pathlib import Path
+from PyQt5.QtWidgets import QApplication
 #from PIL import Image, ImageQt
 script_directory = Path(__file__).parent
 parent_directory = script_directory.parent
 sys.path.append(str(parent_directory))
+app = QApplication(sys.argv)
+screen = app.primaryScreen()
+monitor_width = screen.size().width()
 
 def get_button_style(data_provider=None, normal=True, highlight=False):
     """
@@ -15,7 +19,6 @@ def get_button_style(data_provider=None, normal=True, highlight=False):
         - Highlight(confirmation)
         - Red (alert)
     """
-    button_width, button_height = 244, 107
     button_position = "center"
 
     colors = get_color_scheme(data_provider)
@@ -34,6 +37,9 @@ def get_button_style(data_provider=None, normal=True, highlight=False):
               color: #FFFFFF;
               font-family: Inter;
               font-size: 40px;
+              padding: 10px;
+              margin: 5px;
+              width: {monitor_width // 5}px;
               text-align: {button_position};
           }}
           QPushButton:pressed {{
@@ -97,6 +103,7 @@ def get_button_frame_style():
         background-color: transparent;
         border: none;
         height: 107px;
+        max-width: {monitor_width}px;
     """
 
 def get_frame_style():

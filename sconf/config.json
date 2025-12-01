@@ -86,23 +86,23 @@
         "emailContactsV2": [
             {
                 "email1": "sos.smail.person.1@gmail.com",
-                "icon1": "../sconf/icons/smail_person_1.png"
+                "icon1": "../../sconf/icons/smail_person_1.png"
             },
             {
                 "email2": "sos.smail.person.2@gmail.com",
-                "icon2": "../sconf/icons/smail_person_2.png"
+                "icon2": "../../sconf/icons/smail_person_2.png"
             },
             {
                 "email3": "sos.smail.person.3@gmail.com",
-                "icon3": "../sconf/icons/smail_person_3.png"
+                "icon3": "../../sconf/icons/smail_person_3.png"
             },
             {
                 "email4": "sos.smail.person.4@gmail.com",
-                "icon4": "../sconf/icons/smail_person_4.png"
+                "icon4": "../../sconf/icons/smail_person_4.png"
             },
             {
                 "email5": "sos.smail.person.5@gmail.com",
-                "icon5": "../sconf/icons/smail_person_5.png"
+                "icon5": "../../sconf/icons/smail_person_5.png"
             },
             {
                 "email6": "sos.smail.person.6@gmail.com",
@@ -118,13 +118,13 @@
             "sos.smail.person.6@gmail.com"
         ],
         "emailPicturesPath": [
-            "../sconf/icons/exit.png",
-            "../sconf/icons/smail_person_1.png",
-            "../sconf/icons/smail_person_2.png",
-            "../sconf/icons/smail_person_3.png",
-            "../sconf/icons/smail_person_4.png",
-            "../sconf/icons/smail_person_5.png",
-            "../sconf/icons/smail_person_6.png"
+            "../../sconf/icons/exit.png",
+            "../../sconf/icons/smail_person_1.png",
+            "../../sconf/icons/smail_person_2.png",
+            "../../sconf/icons/smail_person_3.png",
+            "../../sconf/icons/smail_person_4.png",
+            "../../sconf/icons/smail_person_5.png",
+            "../../sconf/icons/smail_person_6.png"
         ],
         "sendPhishingWarning": true,
         "showUrlInEmail": true,
