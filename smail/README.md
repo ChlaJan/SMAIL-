@@ -5,7 +5,7 @@ The developed email client is easy to use and contains only features that a seni
 
 ## Environment for reading email messages
 SMAIL has an environment specifically designed for reading email messages in a user-friendly way, with large, clear buttons and text.
-![menu1](https://github.com/forsenior/senior-os/blob/f69c6886a6b1b831bbf55c9c162af55fd61f8e0e/smail/screens/smail_screen1_en.png)
+![menu1](https://github.com/ChlaJan/SMAIL---Email-client-for-elderly-users/smail/screens/smail_screen1_en.png)
 
 ## Environment for writing email messages
 The environment for writing emails is as easy as possible, with predefined contacts available for convenience.
