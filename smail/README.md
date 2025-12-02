@@ -23,16 +23,11 @@ The application warns users when they are about to send sensitive information, a
 The application warns users when they attempt to leave an unfinished email draft. Users are prompted to confirm whether they want to discard the email before proceeding.
 ![alert2](https://github.com/forsenior/senior-os/blob/f69c6886a6b1b831bbf55c9c162af55fd61f8e0e/smail/screens/smail_unconfirmed_email_en.png)
 
-## 1) For launching the application, use the following procedure.
-Download the latest ISO from the [repository](https://github.com/forsenior/senior-os/releases).
-Create a new virtual machine in your chosen virtualization environment (such as VirtualBox, VMware, or QEMU), and add the downloaded ISO. 
-This ISO is distributed as a Linux-based system.
-Start the virtual environment, and if the application does not launch automatically, run the following command in the terminal:
-```bash
-srun
-```
+## To open configuration menus, use keyboard shortcut "CTRL+O"
+The application opens a new window with all configuration necessary. To get back to e-mail client click either "MENU 1" or "X" button. Application will reload and changes should be done immediately.
 
-## 2) For easier modifications and an overview of the application, follow this procedure.
+
+## 1) For launching the application, use the following procedure.
 
 ## Installation
 To get started with SMAIL, follow these steps to clone the repository and install dependencies:
@@ -47,7 +42,7 @@ After installing Poetry, you can continue with the following steps:
 
 ```bash
 # Clone project repository
-git clone https://github.com/forsenior/senior-os
+git clone https://github.com/ChlaJan/SMAIL---Email-client-for-elderly-users
 
 # Navigate into the project directory
 cd smail
@@ -57,13 +52,7 @@ poetry build
 
 poetry install
 ```
-Repeat these steps for the *sconf* and *srun* directories as well (cd .. -> cd sconf -> poetry build -> poetr...): 
-```bash
-#Run this command in the directory with the same name:
-poetry run srun
-#Or you can use this command, after you set up configuration file:
-poetry run smail
-```
+
 Supported Python Versions: This program is tested and optimized for Python 3.12.
 
 ## Configuration requirement for SMAIL
@@ -123,3 +112,4 @@ To launch the application, follow these steps:
 cd smail
 poetry run smail
 ```
+
