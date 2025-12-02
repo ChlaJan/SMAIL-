@@ -9,23 +9,23 @@ SMAIL has an environment specifically designed for reading email messages in a u
 
 ## Environment for writing email messages
 The environment for writing emails is as easy as possible, with predefined contacts available for convenience.
-![menu2](https://github.com/forsenior/senior-os/blob/f69c6886a6b1b831bbf55c9c162af55fd61f8e0e/smail/screens/smail_screen2_en.png)
+![menu2](./screens/smail_screen2_en.png)
 
 ## Confirmation of Successful Email Sending
 After successfully sending an email, the application displays a confirmation message to inform the user that their email has been sent.
-![alert](https://github.com/forsenior/senior-os/blob/f69c6886a6b1b831bbf55c9c162af55fd61f8e0e/smail/screens/smail_email_send_en.png)
+![alert](./screens/smail_email_send_en.png)
 
 ## Warning when sending sensitive data
 The application warns users when they are about to send sensitive information, adding an additional layer of security.
-![alert1](https://github.com/forsenior/senior-os/blob/f69c6886a6b1b831bbf55c9c162af55fd61f8e0e/smail/screens/smail_sensitive_data_alert_en.png)
+![alert1](./screens/smail_sensitive_data_alert_en.png)
 
 ## Warning when leaving unconfirmed email
 The application warns users when they attempt to leave an unfinished email draft. Users are prompted to confirm whether they want to discard the email before proceeding.
-![alert2](https://github.com/forsenior/senior-os/blob/f69c6886a6b1b831bbf55c9c162af55fd61f8e0e/smail/screens/smail_unconfirmed_email_en.png)
+![alert2](./screens/smail_unconfirmed_email_en.png)
 
 ## To open configuration menus, use keyboard shortcut "CTRL+O"
 The application opens a new window with all configuration necessary. To get back to e-mail client click either "MENU 1" or "X" button. Application will reload and changes should be done immediately.
-
+![menu3](./screens/Smail_configuration_menu.png)
 
 ## 1) For launching the application, use the following procedure.
 
@@ -112,6 +112,7 @@ To launch the application, follow these steps:
 cd smail
 poetry run smail
 ```
+
 
 
 
