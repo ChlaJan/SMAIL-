@@ -65,9 +65,9 @@ class MailSettingsView(QWidget):
         for name, button in self.menu_buttons.items():
             button.setMinimumSize(244, 107) # Updated size to match Figma
             if name == "X":
-                pixmap_icon = QPixmap("/home/vboxuser/senior-os/sconf/icons/exit.png").scaled(40, 40, Qt.KeepAspectRatio,
+                pixmap_icon = QPixmap("icons/exit.png").scaled(72, 72, Qt.KeepAspectRatio,
                                                                         Qt.SmoothTransformation)
-                button.setIconSize(QSize(40, 40))
+                button.setIconSize(QSize(100, 100))
                 button.setIcon(QIcon(pixmap_icon))
             self.button_layout.addWidget(button, alignment=Qt.AlignCenter)
             button.setStyleSheet(style.get_button_style(self.data_provider))

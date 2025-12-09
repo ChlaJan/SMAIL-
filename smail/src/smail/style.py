@@ -12,6 +12,7 @@ app = QApplication(sys.argv)
 screen = app.primaryScreen()
 monitor_width = screen.size().width()
 
+
 def get_button_style(data_provider=None, normal=True, highlight=False):
     """
         Returns style for buttons based on their state:
@@ -320,7 +321,6 @@ def images(data_provider):
         for key, value in contact.items():
             if key.startswith("icon"):
                 icons.append(value)
-
     return icons
 
 def search_mail(id, data_provider):

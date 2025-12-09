@@ -227,7 +227,7 @@ class first_frame(QWidget):
         """
         try:
             self.img = style.images(self.data_provider)
-            exitPath =  "/home/vboxuser/senior-os/sconf/icons/exit.png"
+            exitPath =  "icons/exit.png"
 
             def load_icon(image_path_str, width=413, height=531):
                 """
@@ -245,13 +245,12 @@ class first_frame(QWidget):
                 return QIcon()
 
             self.exit_image = load_icon(exitPath)
-            self.person1_image = load_icon(self.img[0])
-            self.person2_image = load_icon(self.img[1])
-            self.person3_image = load_icon(self.img[2])
-            self.person4_image = load_icon(self.img[3])
-            self.person5_image = load_icon(self.img[4])
-            self.person6_image = load_icon(self.img[5])
-
+            self.person1_image = load_icon("icons/smail_person_1.png")
+            self.person2_image = load_icon("icons/smail_person_2.png")
+            self.person3_image = load_icon("icons/smail_person_3.png")
+            self.person4_image = load_icon("icons/smail_person_4.png")
+            self.person5_image = load_icon("icons/smail_person_5.png")
+            self.person6_image = load_icon("icons/smail_person_6.png")
         except Exception as e:
             print(f"Error: Failed loading images, application will continue without icons.\n{e}")
     
