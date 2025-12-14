@@ -29,7 +29,7 @@ poetry build
 poetry install
 
 #start the application
-poetry run smmail
+poetry run smail
 ```
 
 Supported Python Versions: This program is tested and optimized for Python 3.12.
