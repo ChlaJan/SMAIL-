@@ -19,6 +19,7 @@ git clone https://github.com/ChlaJan/SMAIL---Email-client-for-elderly-users
 
 # Navigate into the project directory
 cd SMAIL---Email-client-for-elderly-users
+
 #navigate into smail directory
 cd smail
 
