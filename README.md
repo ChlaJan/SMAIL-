@@ -34,5 +34,7 @@ poetry run smail
 
 Supported Python Versions: This program is tested and optimized for Python 3.12.
 
+#Installation demostration video 
+
 https://github.com/user-attachments/assets/3e95f26c-bf7e-4e4f-b521-7b81df022682
 
