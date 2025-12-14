@@ -25,6 +25,7 @@ poetry build
 
 poetry install
 
+#start the application
 poetry run smmail
 ```
 
