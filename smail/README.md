@@ -1,7 +1,4 @@
-# SMAIL - Email client for elderly users
-
-This email client is adapted for seniors in the age group of 90 years and more. 
-The developed email client is easy to use and contains only features that a senior may need. 
+# SMAIL - Email client for mentally challenged users
 
 ## Environment for reading email messages
 SMAIL has an environment specifically designed for reading email messages in a user-friendly way, with large, clear buttons and text.
@@ -26,34 +23,6 @@ The application warns users when they attempt to leave an unfinished email draft
 ## To open configuration menus, use keyboard shortcut "CTRL+O"
 The application opens a new window with all configuration necessary. To get back to e-mail client click either "MENU 1" or "X" button. Application will reload and changes should be done immediately.
 ![menu3](./screens/Smail_configuration_menu.png)
-
-## 1) For launching the application, use the following procedure.
-
-## Installation
-To get started with SMAIL, follow these steps to clone the repository and install dependencies:
-
-### Step 1: Install Poetry
-SMAIL uses Poetry for dependency management and packaging. 
-If you don't have Poetry installed, you will need to install it first. 
-You can follow this [step-by-step guide on how to install Poetry](https://gist.github.com/Isfhan/b8b104c8095d8475eb377230300de9b0).
-
-### Step 2: Clone Repository and Install Dependencies
-After installing Poetry, you can continue with the following steps:
-
-```bash
-# Clone project repository
-git clone https://github.com/ChlaJan/SMAIL---Email-client-for-elderly-users
-
-# Navigate into the project directory
-cd smail
-
-# Build and install dependencies using Poetry
-poetry build
-
-poetry install
-```
-
-Supported Python Versions: This program is tested and optimized for Python 3.12.
 
 ## Configuration requirement for SMAIL
 
@@ -91,6 +60,7 @@ If you cant find the correct section use this link: [App passwords](https://myac
 
 To launch the application, follow these steps:
 
+###For easy development work
 1. **Open your preferred IDE**  
    Open your preferred development environment, such as PyCharm or any other suitable IDE.
 
@@ -112,6 +82,7 @@ To launch the application, follow these steps:
 cd smail
 poetry run smail
 ```
+
 
 
 
