@@ -30,6 +30,13 @@ poetry install
 
 #start the application
 poetry run smail
+
+
+
+
 ```
 
 Supported Python Versions: This program is tested and optimized for Python 3.12.
+
+
+https://github.com/user-attachments/assets/7d81e519-f125-4399-8b27-a7cb588b0951
