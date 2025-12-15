@@ -675,10 +675,11 @@ class first_frame(QWidget):
 
 
         if self.sensitive_content_warning_displayed:
-            success = send_email_with_guardian_copy(
-                recipient, subject, content, login, password, smtp_server, smtp_port, self.guardian_email
-            )
-            # print(f"Poslano i pro guardiana: {self.guardian_email}")
+            #success = send_email_with_guardian_copy(
+            #    recipient, subject, content, login, password, smtp_server, smtp_port, self.guardian_email
+            #)
+            #print(f"Poslano i pro guardiana: {self.guardian_email}")
+            print("Sending email with guardian copy is currently disabled.")
         else:
             success = send_email(
                 recipient, subject, content, login, password, smtp_server, smtp_port
