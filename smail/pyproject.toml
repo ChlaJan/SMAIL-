@@ -11,7 +11,7 @@ python = "^3.12"
 chardet = "^5.2.0"
 pillow = "^12.0.0"
 screeninfo = "^0.8.1"
-pyqt5-qt5 = "5.15.2"
+pyqt5-qt5 = "5.15.16"
 PyQt5 = "^5.15.11"
 dataclass_wizard = "^0.26.0"
 sconf = {path = "../sconf", develop = true }
