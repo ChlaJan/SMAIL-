@@ -203,21 +203,12 @@ class MailSettingsView(QWidget):
         status = QProcess.startDetached(sys.executable, sys.argv)
         print(status)
     def show_security_view(self):
-        self.configuration_writer.update_configuration(
-            configuration=self.data_provider.get_main_configuration()
-        )
         self.stacked_widget.setCurrentIndex(1)
         self.stacked_widget.update()
     def show_visual_view(self):
-        self.configuration_writer.update_configuration(
-            configuration=self.data_provider.get_main_configuration()
-        )
         self.stacked_widget.setCurrentIndex(2)
         self.stacked_widget.update()
     def show_mail_view(self):
-        self.configuration_writer.update_configuration(
-            configuration=self.data_provider.get_main_configuration()
-        )
         self.stacked_widget.setCurrentIndex(3)
         self.stacked_widget.update()
 
