@@ -15,10 +15,10 @@ After installing Poetry, you can continue with the following steps:
 
 ```bash
 # Clone project repository
-git clone https://github.com/ChlaJan/SMAIL---Email-client-for-elderly-users
+git clone https://github.com/ChlaJan/SMAIL-
 
 # Navigate into the project directory
-cd SMAIL---Email-client-for-elderly-users
+cd SMAIL-
 
 #navigate into smail directory
 cd smail
