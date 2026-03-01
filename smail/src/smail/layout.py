@@ -18,6 +18,7 @@ import sconf.configuration.configuration_provider as data_provider
 
 CONFIG_FILE_NAME = 'config.json'
 
+Path = Path(__file__).parent / "icons"
 
 class first_frame(QWidget):
     def __init__(self, parent, data_provider, stacked_widget):
