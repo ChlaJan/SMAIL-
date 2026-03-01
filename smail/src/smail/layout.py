@@ -18,7 +18,9 @@ import sconf.configuration.configuration_provider as data_provider
 
 CONFIG_FILE_NAME = 'config.json'
 
-Path = Path(__file__).parent / "icons"
+BASE_DIR = Path(__file__).resolve().parent
+ICONS_DIR = BASE_DIR / "icons"
+exitPath = ICONS_DIR / "exit.png"
 
 class first_frame(QWidget):
     def __init__(self, parent, data_provider, stacked_widget):
@@ -245,13 +247,13 @@ class first_frame(QWidget):
                         return QIcon(pixmap)
                 return QIcon()
 
-            self.exit_image = load_icon(exitPath)
-            self.person1_image = load_icon("icons/smail_person_1.png")
-            self.person2_image = load_icon("icons/smail_person_2.png")
-            self.person3_image = load_icon("icons/smail_person_3.png")
-            self.person4_image = load_icon("icons/smail_person_4.png")
-            self.person5_image = load_icon("icons/smail_person_5.png")
-            self.person6_image = load_icon("icons/smail_person_6.png")
+            self.exit_image = load_icon(ICONS_DIR / "exit.png")
+            self.person1_image = load_icon(ICONS_DIR / "smail_person_1.png")
+            self.person2_image = load_icon(ICONS_DIR / "smail_person_2.png")
+            self.person3_image = load_icon(ICONS_DIR / "smail_person_3.png")
+            self.person4_image = load_icon(ICONS_DIR / "smail_person_4.png")
+            self.person5_image = load_icon(ICONS_DIR / "smail_person_5.png")
+            self.person6_image = load_icon(ICONS_DIR / "smail_person_6.png")
         except Exception as e:
             print(f"Error: Failed loading images, application will continue without icons.\n{e}")
     
