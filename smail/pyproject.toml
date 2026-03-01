@@ -5,7 +5,7 @@ description = ""
 authors = ["Chladek Jan <253185@vutbr.cz>"]
 license = "MIT"
 readme = "README.md"
-include = ["smail/icons/**/*"]
+
 
 [tool.poetry.dependencies]
 python = "^3.12"
