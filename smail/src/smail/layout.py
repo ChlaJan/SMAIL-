@@ -18,9 +18,10 @@ import sconf.configuration.configuration_provider as data_provider
 
 CONFIG_FILE_NAME = 'config.json'
 
-BASE_DIR = Path(__file__).resolve().parent
-ICONS_DIR = BASE_DIR / "icons"
-exitPath = ICONS_DIR / "exit.png"
+BASE_DIR = Path(__file__).resolve().parent  # .../src/smail
+REPO_ROOT = BASE_DIR.parent.parent          # .../smail
+ICONS_DIR = REPO_ROOT / "icons"            # .../smail/icons
+
 
 class first_frame(QWidget):
     def __init__(self, parent, data_provider, stacked_widget):
