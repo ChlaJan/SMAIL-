@@ -59,7 +59,7 @@ class SecuritySettingsView(QWidget):
             button.setMinimumSize(244, 107) # Updated size to match Figma
             button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Minimum)
             if name == "X":
-                pixmap_icon = QPixmap(ICONS_DIR / "exit.png").scaled(72, 72, Qt.KeepAspectRatio,
+                pixmap_icon = QPixmap(str(ICONS_DIR / "exit.png")).scaled(72, 72, Qt.KeepAspectRatio,
                                                                         Qt.SmoothTransformation)
                 button.setIconSize(QSize(100, 100))
                 button.setIcon(QIcon(pixmap_icon))
