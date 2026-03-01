@@ -1,4 +1,5 @@
 import sys
+from pathlib import Path
 from PyQt5.QtCore import pyqtSlot, QSize, Qt, QCoreApplication, QProcess
 from PyQt5.QtGui import QPixmap, QIcon
 from PyQt5.QtWidgets import QWidget, QLabel, QHBoxLayout, QLineEdit, QGridLayout, QPushButton, QVBoxLayout, QSpacerItem, \
@@ -14,6 +15,7 @@ from sconf.ui.styles.global_style_sheets import get_default_label_style, get_def
 from sconf.ui.view_models.global_settings_view_model import GlobalViewModel
 import smail.smail_confview as smail_confview
 
+ICONS_DIR = Path(__file__).parent / "icons"
 
 class VisualSettingsView(QWidget):
     _globalViewModel: GlobalViewModel
@@ -54,7 +56,7 @@ class VisualSettingsView(QWidget):
             button.setMinimumSize(244, 107) # Updated size to match Figma
             button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Minimum)
             if name == "X":
-                pixmap_icon = QPixmap("icons/exit.png").scaled(72, 72, Qt.KeepAspectRatio,
+                pixmap_icon = QPixmap(ICONS_DIR / "exit.png").scaled(72, 72, Qt.KeepAspectRatio,
                                                                         Qt.SmoothTransformation)
                 button.setIconSize(QSize(100, 100))
                 button.setIcon(QIcon(pixmap_icon))

@@ -1,4 +1,5 @@
 
+from pathlib import Path
 import sys
 from PyQt5.QtGui import QPixmap, QIcon
 from PyQt5.QtCore import pyqtSlot, QSize, Qt, QCoreApplication, QProcess
@@ -6,6 +7,8 @@ from PyQt5.QtWidgets import QWidget, QLabel, QComboBox, QLineEdit, QGridLayout, 
     QSizePolicy, QFrame, QHBoxLayout
 
 from smail import style
+
+ICONS_DIR = Path(__file__).parent / "icons"
 
 from sconf.configuration.models.global_configuration import GlobalConfiguration
 from sconf.configuration.models.smail_configuration import SmailConfiguration
@@ -56,7 +59,7 @@ class SecuritySettingsView(QWidget):
             button.setMinimumSize(244, 107) # Updated size to match Figma
             button.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Minimum)
             if name == "X":
-                pixmap_icon = QPixmap("icons/exit.png").scaled(72, 72, Qt.KeepAspectRatio,
+                pixmap_icon = QPixmap(ICONS_DIR / "exit.png").scaled(72, 72, Qt.KeepAspectRatio,
                                                                         Qt.SmoothTransformation)
                 button.setIconSize(QSize(100, 100))
                 button.setIcon(QIcon(pixmap_icon))

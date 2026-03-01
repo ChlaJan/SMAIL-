@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 import sys
 
 from PyQt5 import QtWidgets
@@ -18,6 +19,7 @@ from sconf.ui.styles.global_style_sheets import get_default_label_style, get_def
 from sconf.ui.view_models.smail_settings_view_model import SmailViewModel
 from sconf.ui.view.dialog.table_input_dialog import TablePopup
 
+ICONS_DIR = Path(__file__).parent / "icons"
 
 # TODO: Once initial presentation is done change this to correct binding with the view model
 class MailSettingsView(QWidget):
@@ -65,7 +67,7 @@ class MailSettingsView(QWidget):
         for name, button in self.menu_buttons.items():
             button.setMinimumSize(244, 107) # Updated size to match Figma
             if name == "X":
-                pixmap_icon = QPixmap("icons/exit.png").scaled(72, 72, Qt.KeepAspectRatio,
+                pixmap_icon = QPixmap(str(ICONS_DIR / "exit.png")).scaled(72, 72, Qt.KeepAspectRatio,
                                                                         Qt.SmoothTransformation)
                 button.setIconSize(QSize(100, 100))
                 button.setIcon(QIcon(pixmap_icon))
