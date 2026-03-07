@@ -495,7 +495,6 @@ pyqt5-qt5 = "^5.15.16"
 pyqt5-sip = "^12.15.0"
 qtpy = "^2.4.2"
 setuptools = "75.3.0"
-vcolorpicker = "1.4.4"
 
 [package.source]
 type = "directory"
@@ -537,21 +536,6 @@ doc = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "pygments-
 enabler = ["pytest-enabler (>=2.2)"]
 test = ["build[virtualenv] (>=1.0.3)", "filelock (>=3.4.0)", "ini2toml[lite] (>=0.14)", "jaraco.develop (>=7.21) ; python_version >= \"3.9\" and sys_platform != \"cygwin\"", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "jaraco.test (>=5.5)", "packaging (>=23.2)", "pip (>=19.1)", "pyproject-hooks (!=1.1)", "pytest (>=6,!=8.1.*)", "pytest-home (>=0.5)", "pytest-perf ; sys_platform != \"cygwin\"", "pytest-subprocess", "pytest-timeout", "pytest-xdist (>=3)", "tomli-w (>=1.0.0)", "virtualenv (>=13.0.0)", "wheel (>=0.44.0)"]
 type = ["importlib-metadata (>=7.0.2) ; python_version < \"3.10\"", "jaraco.develop (>=7.21) ; sys_platform != \"cygwin\"", "mypy (==1.12.*)", "pytest-mypy"]
-
-[[package]]
-name = "vcolorpicker"
-version = "1.4.4"
-description = "Open a visual vcolorpicker from any project."
-optional = false
-python-versions = ">=3.7"
-groups = ["main"]
-files = [
-    {file = "vcolorpicker-1.4.4-py3-none-any.whl", hash = "sha256:7e74f71b07204b12b76be5bf979c06a19d9d39fd77609737864643df7feeae9d"},
-    {file = "vcolorpicker-1.4.4.tar.gz", hash = "sha256:17f68f7bb8d0170a0d7d0f304419a9fc4ac22121bc2a7727df1283d74d91afa3"},
-]
-
-[package.dependencies]
-qtpy = "*"
 
 [metadata]
 lock-version = "2.1"
