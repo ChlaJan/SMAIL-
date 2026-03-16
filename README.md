@@ -19,7 +19,10 @@ Download the package for your Linux distribution below:
 
 ### Debian / Ubuntu (`.deb`)
 ```bash
-# Navigate into the download directory and install packages
+# Navigate into the download directory 
+cd Downloads
+
+# Install packages
 sudo dpkg -i smail_0.1.8_amd64.deb
 sudo apt-get install smail_0.1.8_amd64.deb
 ```
@@ -28,7 +31,10 @@ sudo apt-get install smail_0.1.8_amd64.deb
 
 ### Fedora / RHEL (`.rpm`)
 ```bash
-# Navigate into the download directory and install packages
+# Navigate into the download directory 
+cd Downloads
+
+# Install packages
 sudo dnf install smail-0.1.8-1.fc43.x86_64.rpm
 ```
 
