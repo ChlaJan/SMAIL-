@@ -20,7 +20,7 @@ Download the package for your Linux distribution below:
 ### Debian / Ubuntu (`.deb`)
 ```bash
 sudo dpkg -i smail_0.1.8_amd64.deb
-sudo apt-get install -f
+sudo apt-get install smail_0.1.8_amd64.deb
 ```
 
 ---
