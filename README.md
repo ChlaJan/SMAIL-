@@ -1,8 +1,46 @@
 # SMAIL---Email-client-for-elderly-users
 This email client is adapted for mentally challenged users in the age group of 90 years and more. The developed email client is easy to use and contains only features that they may need.
 
+## Installation via Packages
 
-## Installation
+### Step 1: Download installation package
+Choose the right installation package for your operating system. 
+
+Pre-built packages are available directly in the repository.
+Download the package for your Linux distribution below:
+
+| Distribution | Package |
+|---|---|
+| Debian / Ubuntu | [`smail_0.1.8_amd64.deb`](https://github.com/ChlaJan/SMAIL-/raw/main/smail_0.1.8_amd64.deb) |
+| Fedora / RHEL | [`smail-0.1.8-1.fc43.x86_64.rpm`](https://github.com/ChlaJan/SMAIL-/raw/main/smail-0.1.8-1.fc43.x86_64.rpm) |
+
+---
+
+
+### Debian / Ubuntu (`.deb`)
+```bash
+sudo dpkg -i smail_0.1.8_amd64.deb
+sudo apt-get install -f
+```
+
+---
+
+### Fedora / RHEL (`.rpm`)
+```bash
+sudo dnf install smail-0.1.8-1.fc43.x86_64.rpm
+```
+
+---
+
+After installation, launch the app by running:
+```bash
+smail
+```
+> [!WARNING]
+> On the first launch, the application will create a configuration file and close automatically.
+> Please run `smail` a second time to start the application normally.
+
+## Installation via Poetry
 To get started with SMAIL, follow these steps to clone the repository and install dependencies:
 
 ### Step 1: Install Poetry
