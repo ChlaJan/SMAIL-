@@ -60,6 +60,12 @@ If you cant find the correct section use this link: [App passwords](https://myac
 
 To launch the application, follow these steps:
 
+1. if you installed by package
+```bash
+smail
+```
+
+
 ###For easy development work
 1. **Open your preferred IDE**  
    Open your preferred development environment, such as PyCharm or any other suitable IDE.
