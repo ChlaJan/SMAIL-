@@ -28,8 +28,8 @@ Download the package for your Linux distribution below:
 cd Downloads
 
 # Install packages
-sudo dpkg -i smail_0.1.8_amd64.deb
-sudo apt-get install smail_0.1.8_amd64.deb
+sudo dpkg -i smail_0.1.9 _amd64.deb
+sudo apt-get install smail_0.1.9_amd64.deb
 ```
 
 ---
@@ -40,7 +40,7 @@ sudo apt-get install smail_0.1.8_amd64.deb
 cd Downloads
 
 # Install packages
-sudo dnf install smail-0.1.8-1.fc43.x86_64.rpm
+sudo dnf install smail-0.1.9-1.fc43.x86_64.rpm
 ```
 
 ---
