@@ -1050,7 +1050,7 @@ class first_frame(QWidget):
                         background-color: {alert_color};
                         font-size: 32px;  
                         font-weight: bold; 
-                        padding-left: 30px 
+                        padding-left: 30px;
                     """)
         self.email_content_label_2.setReadOnly(True)
 

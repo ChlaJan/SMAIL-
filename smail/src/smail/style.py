@@ -8,10 +8,21 @@ from PyQt5.QtWidgets import QApplication
 script_directory = Path(__file__).parent
 parent_directory = script_directory.parent
 sys.path.append(str(parent_directory))
-app = QApplication(sys.argv)
-screen = app.primaryScreen()
-monitor_width = screen.size().width()
 
+
+def get_monitor_width():
+    """
+        Retrieves the width of the primary monitor using PyQt5.
+        - Used for responsive UI design and scaling elements appropriately.
+    """
+    app = QApplication.instance()
+    if app is None:
+        app = QApplication(sys.argv)
+    screen = app.primaryScreen()
+    size = screen.size()
+    return size.width()
+
+monitor_width = get_monitor_width() 
 
 def get_button_style(data_provider=None, normal=True, highlight=False):
     """
@@ -100,7 +111,7 @@ def get_button_frame_style():
     """
         Returns the style for the button bar frame.
     """
-    return """
+    return f"""
         background-color: transparent;
         border: none;
         height: 107px;
@@ -139,7 +150,7 @@ def get_left_panel_style():
         border-left: 3px solid #000000;
         border-top: 3px solid #000000;
         border-bottom: 3px solid #000000;
-        border-right: none;
+        border-right: 0 px solid transparent;
         margin-left: 10px;
         margin-top: 0px;
         margin-bottom: 10px;
@@ -159,7 +170,7 @@ def get_right_panel_style():
             border-right: 3px solid #000000;
             border-top: 3px solid #000000;
             border-bottom: 3px solid #000000;
-            border-left: none;
+            border-left: 0 px solid transparent;
             margin-right: 10px;
             margin-top: 0px;
             margin-bottom: 10px;
@@ -173,7 +184,7 @@ def get_label_style():
         Returns the style for text labels.
     """
     return """
-        border: 0px solid black;             
+        border: 1px solid black;             
         border-radius: 8px;
         padding: 0px;
         padding-top: 5px;
@@ -198,6 +209,7 @@ def get_sender_info_label():
          text-align: left;
          font-family: 'Inter';
          font-size: 16px;
+
      """
 
 def get_email_content_label():
@@ -205,6 +217,7 @@ def get_email_content_label():
         Returns style for the email content field.
     """
     return """
+   
         border: 1px solid black;             
         border-radius: 8px;
         padding: 0px;
@@ -273,7 +286,7 @@ def get_text_style():
         Returns style for general text elements (labels, headers, etc.).
     """
     return """
-        QLabel {
+
             font-family: 'Inter';
             font-size: 16px;
             color: #000000;
@@ -281,7 +294,7 @@ def get_text_style():
             border: none;
             margin: 0px;
             padding: 0px;
-        }
+        
     """
 
 def get_path(folder, file):

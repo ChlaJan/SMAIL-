@@ -59,7 +59,7 @@ class MailSettingsView(QWidget):
             "Menu1": QPushButton("MENU 1"),
             "X": QPushButton(""),
             "Security": QPushButton("SECURITY"),
-            "Visual": QPushButton("VISUAL"),
+            "Vizual": QPushButton("APPEARANCE"),
             "Mail": QPushButton("MAIL")
         }
 
@@ -185,13 +185,13 @@ class MailSettingsView(QWidget):
         self.menu_buttons["Menu1"].setStyleSheet(style.get_button_style(self.data_provider))
         self.menu_buttons["X"].setStyleSheet(style.get_button_style(self.data_provider))
         self.menu_buttons["Security"].setStyleSheet(style.get_button_style(self.data_provider))
-        self.menu_buttons["Visual"].setStyleSheet(style.get_button_style(self.data_provider))
+        self.menu_buttons["Vizual"].setStyleSheet(style.get_button_style(self.data_provider))
         self.menu_buttons["Mail"].setStyleSheet(style.get_button_style(self.data_provider, highlight=True))
 
         self.menu_buttons["X"].clicked.connect(self.terminate_shelp)
         self.menu_buttons["Menu1"].clicked.connect(self.terminate_shelp)
         self.menu_buttons["Security"].clicked.connect(self.show_security_view)
-        self.menu_buttons["Visual"].clicked.connect(self.show_visual_view)
+        self.menu_buttons["Vizual"].clicked.connect(self.show_visual_view)
         self.menu_buttons["Mail"].clicked.connect(self.show_mail_view)
 
 
