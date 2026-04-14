@@ -16,7 +16,7 @@ Download the package for your Linux distribution below:
 
 | Distribution | Package |
 |---|---|
-| Debian / Ubuntu | [`smail_0.1.8_amd64.deb`](https://github.com/ChlaJan/SMAIL-/raw/main/smail_0.1.8_amd64.deb) |
+| Debian / Ubuntu | [`smail_0.1.9_amd64.deb`](https://github.com/ChlaJan/SMAIL-/raw/main/smail_0.1.9_amd64.deb) |
 | Fedora / RHEL | [`smail-0.1.8-1.fc43.x86_64.rpm`](https://github.com/ChlaJan/SMAIL-/raw/main/smail-0.1.8-1.fc43.x86_64.rpm) |
 
 ---
