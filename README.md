@@ -27,9 +27,12 @@ Download the package for your Linux distribution below:
 # Navigate into the download directory 
 cd Downloads
 
+#Update repositories
+sudo apt update
+
 # Install packages
 sudo dpkg -i smail_0.1.9 _amd64.deb
-sudo apt-get install smail_0.1.9_amd64.deb
+sudo apt install smail_0.1.9_amd64.deb
 ```
 
 ---
@@ -38,6 +41,9 @@ sudo apt-get install smail_0.1.9_amd64.deb
 ```bash
 # Navigate into the download directory 
 cd Downloads
+
+#Update repositories
+sudo dnf update
 
 # Install packages
 sudo dnf install smail-0.1.9-1.fc43.x86_64.rpm
