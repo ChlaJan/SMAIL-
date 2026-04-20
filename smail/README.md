@@ -22,7 +22,7 @@ The application warns users when they attempt to leave an unfinished email draft
 
 ## To open configuration menus, use keyboard shortcut "CTRL+O"
 The application opens a new window with all configuration necessary. To get back to e-mail client click either "MENU 1" or "X" button. Application will reload and changes should be done immediately.
-![menu3](./screens/Smail_configuration_menu.png)
+![menu3](./screens/smail_configuration_menu.png)
 
 ## Configuration requirement for SMAIL
 
