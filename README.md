@@ -50,15 +50,14 @@ sudo dnf install smail-0.1.9-1.fc43.x86_64.rpm
 ```
 
 ---
+> [!WARNING]
+> On the first launch, the application will create a configuration file and close automatically.
+> Please run `smail` a second time to start the application normally.
 
 After installation, launch the app by running:
 ```bash
 smail
 ```
-> [!WARNING]
-> On the first launch, the application will create a configuration file and close automatically.
-> Please run `smail` a second time to start the application normally.
-
 ## Installation via Poetry
 To get started with SMAIL, follow these steps to clone the repository and install dependencies:
 
