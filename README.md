@@ -1,5 +1,5 @@
 # SMAIL---Email-client-for-elderly-users
-This email client is adapted for mentally challenged users in the age group of 90 years and more. The developed email client is easy to use and contains only features that they may need.
+This email client is adapted for senior users in the age group of 90 years and more. The developed email client is easy to use and contains only features that they may need.
 
 ## Getting started
 Smail uses straightfoward and easy-to-use approach for control system. Control is based on big menu buttons and "CTRL+O" keyboard shortcut to show options menu.
