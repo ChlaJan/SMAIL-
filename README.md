@@ -34,6 +34,14 @@ sudo apt update
 sudo dpkg -i smail_0.1.9_amd64.deb
 sudo apt install smail_0.1.9_amd64.deb
 ```
+> [!WARNING]
+> On Debian distribution packages python3.12 a libxcb-xinerama0 fail to install
+> due to this please download them separately by
+> ```bash
+sudo apt-get install python3.12 libxcb-xinerama0
+```
+
+
 
 ---
 
