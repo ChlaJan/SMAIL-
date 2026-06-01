@@ -6,7 +6,7 @@
 set -euo pipefail
 
 APP_NAME="smail"
-APP_VERSION="0.1.8"
+APP_VERSION="0.1.9"
 APP_DESCRIPTION="smail email client"
 APP_MAINTAINER="Chladek Jan <253185@vutbr.cz>"
 BIN_NAME="smail"
