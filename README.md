@@ -31,7 +31,7 @@ cd Downloads
 sudo apt update
 
 # Install packages
-sudo dpkg -i smail_0.1.9 _amd64.deb
+sudo dpkg -i smail_0.1.9_amd64.deb
 sudo apt install smail_0.1.9_amd64.deb
 ```
 
