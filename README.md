@@ -42,6 +42,8 @@ sudo apt install smail_0.1.9_amd64.deb
 sudo apt-get install python3.12 libxcb-xinerama0
 ```
 
+https://github.com/user-attachments/assets/db72c1f8-8e4c-4357-8499-4092dc141728
+
 
 
 ---
