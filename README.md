@@ -41,11 +41,6 @@ sudo apt install smail_0.1.9_amd64.deb
 ```bash
 sudo apt-get install python3.12 libxcb-xinerama0
 ```
-
-https://github.com/user-attachments/assets/db72c1f8-8e4c-4357-8499-4092dc141728
-
-
-
 ---
 
 ### Fedora / RHEL (`.rpm`)
@@ -69,6 +64,9 @@ After installation, launch the app by running:
 ```bash
 smail
 ```
+
+https://github.com/user-attachments/assets/db72c1f8-8e4c-4357-8499-4092dc141728
+
 ## Installation via Poetry
 To get started with SMAIL, follow these steps to clone the repository and install dependencies:
 
