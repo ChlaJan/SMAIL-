@@ -35,7 +35,7 @@ class ConfigurationWriter:
         else:
             os.mkdir(os.path.join(Path.home(), '.sconf'))
 
-         self.__load_configuration()
+        self.__load_configuration()
 
     def update_configuration(self, configuration: sos_configuration.SOSConfiguration):
         """
@@ -62,7 +62,7 @@ class ConfigurationWriter:
                 swebConfiguration=sweb_config.SwebConfiguration()
             )
             self.__save_configuration(json.dumps(default_config, indent=4, cls=EnhancedJSONEncoder, ensure_ascii=True))
-    
+
     def __load_configuration(self):
         self.__validate_and_create_default_config()  # zajistí existenci souboru
         with open(os.path.join(self._configStoragePath, self._configFileName), 'r') as f:
