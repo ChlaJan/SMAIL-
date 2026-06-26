@@ -2,6 +2,7 @@ import dataclasses
 import json
 import os.path
 from pathlib import Path
+import sys
 
 from dataclass_wizard import asdict
 
@@ -34,7 +35,7 @@ class ConfigurationWriter:
         else:
             os.mkdir(os.path.join(Path.home(), '.sconf'))
 
-        self.__validate_and_create_default_config()
+         self.__load_configuration()
 
     def update_configuration(self, configuration: sos_configuration.SOSConfiguration):
         """
@@ -48,19 +49,25 @@ class ConfigurationWriter:
 
     def __validate_and_create_default_config(self):
         """
-        Private method creating default configuration os SOS if the specified file is not present
+        Private method creating default configuration of SOS if the specified file is not present
         :return:
         """
-        if not os.path.isfile(os.path.join(self._configStoragePath, self._configFileName)):
+        try:
+            if not os.path.isfile(os.path.join(self._configStoragePath, self._configFileName)):
+                raise FileNotFoundError
+        except FileNotFoundError:
             default_config = sos_configuration.SOSConfiguration(
                 globalConfiguration=global_config.GlobalConfiguration(),
                 smailConfiguration=smail_config.SmailConfiguration(),
                 swebConfiguration=sweb_config.SwebConfiguration()
             )
-
             self.__save_configuration(json.dumps(default_config, indent=4, cls=EnhancedJSONEncoder, ensure_ascii=True))
+    
+    def __load_configuration(self):
+        self.__validate_and_create_default_config()  # zajistí existenci souboru
+        with open(os.path.join(self._configStoragePath, self._configFileName), 'r') as f:
+            return json.load(f)
 
-        pass
 
     def __save_configuration(self, config: str):
         with open(os.path.join(self._configStoragePath, self._configFileName), "w+", encoding='utf-8') as outfile:
