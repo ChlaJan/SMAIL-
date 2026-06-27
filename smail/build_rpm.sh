@@ -17,7 +17,7 @@ set -euo pipefail
 # Config
 # ---------------------------------------------------------------------------
 APP_NAME="smail"
-APP_VERSION="0.1.8"
+APP_VERSION="0.1.10"
 APP_RELEASE="1"                      # increment when repackaging same version
 APP_DESCRIPTION="smail email client"
 APP_MAINTAINER="Chladek Jan <253185@vutbr.cz>"

@@ -255,8 +255,8 @@ class first_frame(QWidget):
         except Exception as e:
             print(f"Error: Failed loading images, application will continue without icons.\n{e}")
     
-    def smail_conf(self): 
-         """
+    def smail_conf(self):
+        """
         Function to open security configuration menu
         """
         self.stacked_widget.setCurrentIndex(1)
